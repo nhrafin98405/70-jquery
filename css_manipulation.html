@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./jquery-4.0.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <p id="cng">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, id repudiandae possimus explicabo illum neque suscipit veritatis consequatur, animi iste ex tempora beatae minima numquam, nulla ab corporis. Numquam, molestiae.</p>
+
+    <button id="btn"> change css </button>
+
+    <script>
+
+            // singel 
+            $('#btn').click(function(){
+
+                $('p').css("color","red");
+                $('p').css("background-color","blue");
+                $('p').css("width","400px");
+            
+
+            // multipule
+
+            // $('p').css({
+            //     "color": "red",
+            //     "background-color": "yellow",
+            //     "width": "400px",
+            // });
+
+
+
+            })
+
+
+    </script>
+    
+</body>
+</html>

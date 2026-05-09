@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./jquery-4.0.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+    <style>
+
+        .mycls{
+            background-color: #f5b8b8;
+            color: aqua;
+        }
+        .mycls2{
+            background-color: #00fdc6;
+            color: rgb(3, 146, 165);
+        }
+
+
+    </style>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, id repudiandae possimus explicabo illum neque suscipit veritatis consequatur, animi iste ex tempora beatae minima numquam, nulla ab corporis. Numquam, molestiae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, id repudiandae possimus explicabo illum neque suscipit veritatis consequatur, animi iste ex tempora beatae minima numquam, nulla ab corporis. Numquam, molestiae.</p>
+    <button id="adbtn"> add css </button>
+    <br><br><br>
+    <button id="rmvbtn"> remove css </button>
+    <br><br><br>
+    <button id="togl"> togol css </button>
+    <br><br><br>
+   
+
+    
+
+    <script>
+
+        $('#adbtn').click(function(){
+            $('p').addClass('mycls');
+        })
+
+        $('#rmvbtn').click(function(){
+            $('p').removeClass('mycls');
+        })
+
+        $('#togl').click(function(){
+            $('p').toggleClass('mycls');
+        })
+            
+
+    </script>
+    
+</body>
+</html>
