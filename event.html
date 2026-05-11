@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    input, select {
+        padding: 5px;
+        margin: 5px 0;
+    }
+</style>
+</head>
+<body>
+
+<form id="myForm">
+    <input type="text" placeholder="Input 1">
+    <button type="submit">Submit</button>
+</form>
+
+<br><br>
+
+<select id="city">
+    <option>Dhaka</option>
+    <option>Khulna</option>
+</select>
+
+<br><br>
+
+<input type="text" id="email1" placeholder="Email 1">
+<br><br>
+<input type="text" id="email2" placeholder="Email 2">
+<br><br>
+<input type="text" id="e" placeholder="Focus me">
+<br><br>
+<input type="text" id="name" placeholder="Type something">
+
+<script>
+$(document).ready(function(){
+
+    // Form submit
+    $("#myForm").submit(function(e){
+        e.preventDefault();
+        alert("Form submit");
+    });
+
+    // City select change
+    $("#city").change(function(){
+        $(this).css("background","green");
+    });
+
+    // Input blur
+    $("#email1, #email2").blur(function(){
+        $(this).css("background","red");
+    });
+
+    // Focus on #e
+    $("#e").focus(function(){
+        $(this).css("background","aqua");
+    });
+
+    // Keydown on #name
+    $("#name").keydown(function(){
+        $(this).css("background","yellow");
+    });
+
+    // -------------------------------
+    // Click outside to blur any input
+    $(document).click(function(event){
+        // Check if click is outside form and other inputs
+        if(!$(event.target).closest('input, select, textarea, #myForm, button').length){
+            $('input, select, textarea').blur(); // blur all
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>

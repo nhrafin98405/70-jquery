@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./jquery-4.0.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+.img{
+    width: 500px;
+}
+.small{
+    width: 200px;
+}
+</style>
+
+</head>
+<body>
+
+
+
+    <img id="myimg" src="./1.png" alt="" width="500px"> <br><br><br>
+
+    <button id="imge">img</button><br>
+    <button id="tgl">return img</button><br><br>
+
+    <a href="#" target="_blank" rel="noopener noreferrer">w3schools</a><br><br>
+
+    <input type="checkbox" id="chk">
+
+    <button id="btnck"> change </button>
+
+<style>
+.img {
+    width: 500px; /* original size */
+}
+.small {
+    width: 200px; /* toggled size */
+}
+</style>
+
+    
+    
+
+    <script>
+
+        $("a").attr("href","https://www.w3schools.com/");
+        $("a").removeAttr("target");
+
+ $(document).ready(function(){
+
+    // image change
+    $('#imge').click(function(){
+        $('#myimg').attr('src', './2.jpg');
+        $('#myimg').css('width','200px');
+    });
+
+    // toggle class
+    $('#tgl').click(function(){
+        $('#myimg').toggleClass('img');
+    });
+
+});
+
+        $(document).ready(function(){
+            $('#btnck').click(function(){
+                $('#chk').prop("checked",true)
+            })
+        })
+            
+
+    </script>
+
+</body>
+</html>
